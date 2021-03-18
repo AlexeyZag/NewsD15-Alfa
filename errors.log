@@ -1,0 +1,46 @@
+2021-03-03 12:05:16,216 ERROR Internal Server Error: /news/ C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError('get() takes 0 positional arguments but 2 were given'), <traceback object at 0x0000023119DF1E40>)
+Traceback (most recent call last):
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() takes 0 positional arguments but 2 were given
+2021-03-03 12:05:16,219 ERROR "GET /news/ HTTP/1.1" 500 80827 C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\core\servers\basehttp.py None
+2021-03-03 12:12:59,397 ERROR Internal Server Error: /2 C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("'AnonymousUser' object is not iterable"), <traceback object at 0x000001FE349F3580>)
+Traceback (most recent call last):
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\views\generic\detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\apps\news\views.py", line 182, in get_context_data
+    context['user_categories'] = Category.objects.filter(subscribers= user)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\sql\query.py", line 1292, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\db\models\sql\query.py", line 1121, in check_related_objects
+    for v in value:
+  File "C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\utils\functional.py", line 241, in inner
+    return func(self._wrapped, *args)
+TypeError: 'AnonymousUser' object is not iterable
+2021-03-03 12:12:59,403 ERROR "GET /2 HTTP/1.1" 500 135429 C:\Users\alex8\PycharmProjects\djangoNews2\venv\lib\site-packages\django\core\servers\basehttp.py None

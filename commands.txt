@@ -1,0 +1,7 @@
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+django-admin makemessages -l ru
+django-admin compilemessages -l ru
+python manage.py makemessages -l ru
+python manage.py compilemessages -l ru
